@@ -1,0 +1,11 @@
+#Jahna A Thompson
+
+library(tidyverse)
+library(here)
+
+#load dataset and create pipe -- %>%
+tv_hours_table <-gss_cat %>%
+  group_by(marital) %>% 
+  summarise(mean_tv_hours=mean(tvhours,na.rm=TRUE))
+
+write.csv(tv_hours_table,here("TV_HOURS_BY_MARITAL.csv"))
