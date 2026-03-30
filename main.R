@@ -2,9 +2,11 @@
 
 library(tidyverse)
 library(here)
+library(dplyr)
 
 #load dataset and create pipe -- %>%
 tv_hours_table <-gss_cat %>%
+  filter(age>=30) %>% 
   group_by(marital) %>% 
   summarise(mean_tv_hours=mean(tvhours,na.rm=TRUE))
 
