@@ -1,5 +1,5 @@
 #Jahna A Thompson
-#practice lesson 
+#practice lesson learning how to use Git and GitHub
 #The Graph courses on youtube
 
 library(tidyverse)
