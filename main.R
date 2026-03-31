@@ -7,9 +7,9 @@ library(here)
 library(dplyr)
 
 #load dataset and create pipe -- %>%
-tv_hours_table <-gss_cat %>%
+tv_hours_tabulation <-gss_cat %>%
   filter(age < 30) %>% 
   group_by(marital) %>% 
   summarise(mean_tv_hours=mean(tvhours,na.rm=TRUE))
 
-write.csv(tv_hours_table,here("TV_HOURS_BY_MARITAL.csv"))
+write.csv(tv_hours_tabulation,here("TV_HOURS_BY_MARITAL.csv"))
